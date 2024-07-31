@@ -1,8 +1,32 @@
-# React + Vite
+# REACT TRELLO TODO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## STACK
 
-Currently, two official plugins are available:
+### FE
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- react
+- react-beautiful-dnd
+- redux
+- redux-thunk
+- https://icon-sets.iconify.design/ic/outline-restore-from-trash/
+
+### TOOLS
+
+- prettier
+
+## Scripts
+
+```bash
+# install app's dependencies
+$ npm install
+
+# dev server localhost:3000 // use environment variable in .env.development
+$ npm start
+
+# build for production // use environment variable in .env.production
+$ npm run build
+```
+
+## Screenshot
+
+![alt text](public/assets/images/todoVideo.gif)
