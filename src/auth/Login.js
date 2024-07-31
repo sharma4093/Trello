@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Login=()=> {
   const [mode, setMode] =useState('login')
@@ -9,7 +10,6 @@ const Login=()=> {
   const switchMode=()=>{
     setMode(!'login')
   }
-
 
     return (
       <>
@@ -23,7 +23,7 @@ const Login=()=> {
               {/* Sign In Section */}
               <section className="w-full max-w-xl">
                 {/* Header */}
-                <header className="mb-10 text-center">
+                <header className="mb-0 text-center bg-white h-max">
                   <h1 className="mb-2 inline-flex items-center gap-2 text-2xl font-bold">
                     <svg
                       className="hi-mini hi-cube-transparent inline-block size-5 text-purple-600 dark:text-purple-500"
@@ -40,14 +40,11 @@ const Login=()=> {
                     </svg>
                     <span>myNotion</span>
                   </h1>
-                  <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Welcome, please sign in to your dashboard
-                  </h2>
                 </header>
                 {/* END Header */}
   
                 {/* Sign In Form */}
-                <div className="flex flex-col overflow-hidden border-2 rounded-lg bg-white shadow-sm dark:bg-gray-800 dark:text-gray-100">
+                <div className="flex flex-col overflow-hidden mt-3 border-2 rounded-lg bg-white shadow-sm dark:bg-gray-800 dark:text-gray-100">
                   <div className="grow p-5 md:px-10 md:py-7">
                   {mode==='login'?
                     (<form className="space-y-6">
@@ -93,6 +90,7 @@ const Login=()=> {
                             Forgot Password?
                           </a>
                         </div>
+                        <Link to="/home">
                         <button
                           type="submit"
                           className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-purple-700 bg-purple-700 px-6 py-3 font-semibold leading-6 text-white hover:border-purple-600 hover:bg-purple-600 hover:text-white focus:ring focus:ring-purple-400/50 active:border-purple-700 active:bg-purple-700 dark:focus:ring-purple-400/90"
@@ -112,6 +110,7 @@ const Login=()=> {
                           </svg>
                           <span>Sign In</span>
                         </button>
+                        </Link>
                         {/* Divider: With Label */}
                         <div className="my-5 flex items-center">
                           <span

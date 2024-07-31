@@ -27,6 +27,3 @@ $ npm start
 $ npm run build
 ```
 
-## Screenshot
-
-![alt text](public/assets/images/todoVideo.gif)

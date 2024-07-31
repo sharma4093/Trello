@@ -16,9 +16,9 @@ const Sidebar = () => {
             </div>
             <div className="flex justify-between align-middle my-3">
                 <div className="flex gap-2">
-                    <img src={Notic} />
-                    <img src={DarklightMode} />
-                    <h1 className="text-black">{'>>'}</h1>
+                    <img src={Notic} className='hover:cursor-pointer'/>
+                    <img src={DarklightMode} className='hover:cursor-pointer' />
+                    <h1 className="text-black hover:cursor-pointer">{'>>'}</h1>
                 </div>
                 <button className="border-2 border-black text-black bg-zinc-200 rounded px-2">Logout</button>
             </div>
