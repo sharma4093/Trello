@@ -37,13 +37,9 @@ function TodoList({ title, cards, listId, index }) {
           ref={provided.innerRef}
           className="todoList"
         >
-          <Droppable droppableId={String(listId)} type="CARD">
-            {(providedDrop) => (
-              <>
-                <div>
-                  <div className="todoList__head">
+                  <div className="todoList__head bg-zinc-200 border rounded">
                     <div
-                      className="todoList__head__title"
+                      className="todoList__head__title text-xl mb-3"
                       onClick={() => setIsEditing(true)}
                     >
                       {isEditing ? (
@@ -63,11 +59,15 @@ function TodoList({ title, cards, listId, index }) {
                     </div>
                     <ButtonIcon
                       icon="material-symbols:delete-outline"
-                      color="#fff"
+                      color="black"
                       onClick={handleRemove}
                     />
                   </div>
-                </div>
+          <Droppable droppableId={String(listId)} type="CARD">
+            {(providedDrop) => (
+              <>
+                
+                
                 <div
                   {...providedDrop.droppableProps}
                   ref={providedDrop.innerRef}
@@ -87,7 +87,7 @@ function TodoList({ title, cards, listId, index }) {
                   })}
                   {providedDrop.placeholder}
                 </div>
-                <TodoCreate listId={listId} className="button_list" />
+                <TodoCreate listId={listId} className="button_list bg-zinc-200 border rounded " />
               </>
             )}
           </Droppable>

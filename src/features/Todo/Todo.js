@@ -33,12 +33,13 @@ function Todo() {
   }
 
   return (
-    <div
-      className="todo"
-      // style={{
-      //   width: 340 * columnsSelector.length || 1,
-      // }}
-    >
+    <div className="todo">
+      <div>
+        <div className='flex justify-between px-4 text-black'>
+          <h1 className='text-2xl font-bold'>Good Morning, Prashant!</h1>
+          <p>help & feedback ❓</p>
+        </div>
+      </div>
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="all-lists" direction="horizontal" type="LIST">
           {(provided) => {
@@ -68,7 +69,7 @@ function Todo() {
                   </>
                 ) : null}
                 {provided.placeholder}
-                <TodoCreate isLists className="todo_add_list" />
+                {/* <TodoCreate isLists className="todo_add_list" /> */}
               </div>
             )
           }}

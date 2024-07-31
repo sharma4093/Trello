@@ -13,7 +13,7 @@ body {
     Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #b6c2cf;
+  color: #c2c2c2;
   font-size: 14px;
 }
 
@@ -77,8 +77,11 @@ button {
 .todo {
   height: calc(100vh - 47px);
   position: relative;
-  overflow-y: hidden;
+  overflow: auto;
   padding: 0 10px;
+}
+.todo::-webkit-scrollbar {
+  display: none;
 }
 
 .todo__container {
@@ -93,7 +96,8 @@ button {
 /* start todo list */
 
 .todoList {
-  background-color: #101204;
+  /* background-color: #ffffff; */
+  color:black;
   border-radius: 12px;
   min-width: 300px;
   max-width: 300px;
@@ -103,6 +107,7 @@ button {
   display: flex;
   flex-direction: column;
   word-break: break-all;
+  overflow: auto;
 }
 
 .todoList__content {
@@ -112,6 +117,9 @@ button {
   overflow-x: hidden;
   overflow-y: auto;
   margin-bottom: 0;
+}
+.todoList__content::-webkit-scrollbar {
+  display: none;
 }
 
 .todoList__head {
@@ -125,12 +133,12 @@ button {
 .todoList__head__title {
   width: 100%;
   width: 100%;
-  padding: 6px 8px 6px 12px;
+  padding: 6px 8px 40px 12px;
   word-break: break-all;
-  font-size: 14px;
   font-weight: 600;
   line-height: 20px;
   height: 28px;
+  border-bottom: 4px solide white;
 }
 
 .todoList__input {
@@ -179,6 +187,7 @@ button {
   width: 92%;
   min-height: 50px;
   line-height: 18px;
+  color:white;
 }
 
 .todoCard__member {
@@ -202,7 +211,7 @@ button {
   width: 260px;
   border-radius: 12px;
   padding: 6px;
-  color: #ffffff;
+  color: #5b5b5b;
   font-weight: bold;
 }
 
@@ -263,7 +272,8 @@ button {
 }
 
 .todo_add_list {
+  border:1px solid;
   padding: 6px;
-  background-color: #101204;
+  margin-top: 6px;
   border-radius: 12px;
 }

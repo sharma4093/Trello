@@ -65,6 +65,7 @@ const TodoCreate = ({ isLists, listId, className }) => {
         <>
           <TodoFrom
             text={title}
+            className="mt-10"
             placeholder={placeholder}
             onChange={onChange}
             handleCloseForm={handleCloseForm}
@@ -79,8 +80,8 @@ const TodoCreate = ({ isLists, listId, className }) => {
           </TodoFrom>
         </>
       ) : (
-        <div className="todoCreate__button" onClick={handleOpenForm}>
-          <ButtonIcon icon="material-symbols:add" color="#fff" />
+        <div className="todoCreate__button text-black" onClick={handleOpenForm}>
+          <ButtonIcon icon="material-symbols:add" color="black" />
           <span>{label}</span>
         </div>
       )}
